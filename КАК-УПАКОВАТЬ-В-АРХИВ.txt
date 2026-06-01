@@ -1,0 +1,27 @@
+Как собрать архив GreenEdu для передачи
+========================================
+
+1. Удалите лишнее (уменьшит размер):
+   - папку node_modules
+   - папку .next
+   - папку .git (если есть)
+   - файлы .env и .env.local (создадутся сами при первом запуске)
+
+2. Обязательно оставьте в архиве:
+   - ЗАПУСК.bat
+   - ЗАПУСК-ДЛЯ-ДЕТЕЙ.md  ← главная инструкция для детей
+   - ZAPUSK.md, README.md
+   - config/environment.env
+   - docker-compose.yml
+   - scripts/ (setup.mjs, start-site.mjs)
+   - prisma/, src/, public/
+   - package.json и package-lock.json
+   - public/*.webp и public/pdfs/
+
+3. Старые большие SVG можно не класть в архив — сайт использует WebP.
+
+4. Заархивируйте папку GreenEdu в GreenEdu-latest.zip
+
+Получатель:
+  распаковал → Docker Desktop → двойной клик ЗАПУСК.bat
+  или читает ЗАПУСК-ДЛЯ-ДЕТЕЙ.md

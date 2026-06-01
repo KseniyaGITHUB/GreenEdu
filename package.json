@@ -1,0 +1,62 @@
+{
+  "name": "green-education",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "setup": "node scripts/setup.mjs",
+    "go": "node scripts/setup.mjs && node scripts/start-site.mjs",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "verify": "node scripts/verify-login.mjs"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@auth/core": "^0.40.0",
+    "@auth/prisma-adapter": "^2.11.1",
+    "@heroui/form": "^2.1.27",
+    "@heroui/input": "^2.4.28",
+    "@heroui/modal": "^2.2.24",
+    "@heroui/navbar": "^2.2.25",
+    "@heroui/react": "^2.8.5",
+    "@heroui/system": "^2.4.23",
+    "@heroui/theme": "^2.4.23",
+    "@prisma/extension-accelerate": "^2.0.2",
+    "@types/dompurify": "^3.0.5",
+    "bcryptjs": "^3.0.3",
+    "dompurify": "^3.3.0",
+    "framer-motion": "^12.23.25",
+    "html-react-parser": "^5.2.10",
+    "isomorphic-dompurify": "^2.33.0",
+    "next": "15.3.4",
+    "next-auth": "^5.0.0-beta.30",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-markdown": "^10.1.0",
+    "zod": "^3.25.76",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@prisma/client": "^6.10.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "prisma": "^6.10.1",
+    "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.3",
+    "typescript": "^5"
+  }
+}

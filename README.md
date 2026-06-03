@@ -22,6 +22,25 @@
 
 ## Запуск локально
 
+### Windows (PowerShell)
+
+1. Установите [Node.js LTS](https://nodejs.org/) и [Docker Desktop](https://www.docker.com/products/docker-desktop/) — Docker должен быть **запущен**.
+2. Скачайте **актуальный** репозиторий: https://github.com/KseniyaGITHUB/GreenEdu (не старый архив с `setup.mjs` / `ЗАПУСК.bat`).
+3. В папке проекта:
+
+```powershell
+.\start-windows.ps1
+```
+
+Если PowerShell блокирует скрипт один раз:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\start-windows.ps1
+```
+
+### Linux / macOS
+
 ```bash
 cp .env.example .env
 docker compose up -d

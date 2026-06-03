@@ -2,10 +2,7 @@
 
 import { Button } from "@heroui/react";
 import Link from "next/link";
-import { useState } from "react";
 import { publicPath } from "@/config/base-path";
-import { useAuthStore } from "@/store/auth.store";
-import AuthModal from "@/components/UI/modals/auth.modal";
 import HomeSplash from "@/components/UI/home-splash";
 import CachedImage from "@/components/UI/cached-image";
 
@@ -31,23 +28,11 @@ const ctaClassName = `
 `;
 
 export default function Home() {
-  const { isAuth } = useAuthStore();
-  const [isAuthOpen, setIsAuthOpen] = useState(false);
-
-  const handleGoToCourses = () => {
-    if (!isAuth) setIsAuthOpen(true);
-  };
-
-  const CtaButton = () =>
-    isAuth ? (
-      <Link href="/ingredients" className="block w-full">
-        <Button className={ctaClassName}>Перейти к курсам</Button>
-      </Link>
-    ) : (
-      <Button onPress={handleGoToCourses} className={ctaClassName}>
-        Начнем учиться!
-      </Button>
-    );
+  const CtaButton = () => (
+    <Link href="/courses" className="block w-full">
+      <Button className={ctaClassName}>Начнем учиться!</Button>
+    </Link>
+  );
 
   return (
     <>
@@ -137,8 +122,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
     </>
   );
 }

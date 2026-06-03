@@ -1,29 +1,49 @@
 # Зеленое образование
 
-Онлайн-платформа про экологию и устойчивое развитие: курсы, лекции, тесты и видеоматериалы.
+Онлайн-платформа экологического образования: 4 курса, PDF-лекции, тесты, видео.
 
-**Сайт:** https://canwant.ru/eco/
+**Демо:** https://canwant.ru/eco/
 
-**Архив проекта:** [GreenEdu-latest.zip](./GreenEdu-latest.zip)
+**Архив:** [GreenEdu-latest.zip](./GreenEdu-latest.zip)
+
+## Состав проекта
+
+| Раздел | Путь |
+|--------|------|
+| Главная | `src/app/page.tsx` |
+| Список курсов | `src/app/courses/page.tsx` |
+| Курс (лекции, тесты, видео) | `src/app/courses/[id]/page.tsx` |
+| О нас | `src/app/(public)/about/` |
+| Данные курсов | `src/config/coursesData.ts` |
+| PDF лекций | `public/pdfs/` |
+| Вход / регистрация | NextAuth + `prisma/` |
+
+Курсы открыты **без входа**. Вход нужен для регистрации личного аккаунта.
+
+## Запуск локально
+
+```bash
+cp .env.example .env
+docker compose up -d
+npm install
+npm run db:push
+npm run db:seed
+npm run dev
+```
+
+Сайт: http://localhost:3000
+
+Для деплоя как на canwant.ru задайте `NEXT_PUBLIC_BASE_PATH=/eco` в `.env` перед `npm run build`.
 
 ## Демо-аккаунт
 
-| | |
-|---|---|
-| Email | `demo@demo.ru` |
-| Пароль | `demo1234` |
+| Email | Пароль |
+|-------|--------|
+| `demo@demo.ru` | `demo1234` |
 
 ## Стек
 
-- Next.js 15, React 19, TypeScript
-- PostgreSQL, Prisma
-- NextAuth, HeroUI
-
-## Структура
-
-- `src/` — приложение
-- `public/` — изображения и PDF лекций
-- `prisma/` — схема БД и seed
+Next.js 15 · React 19 · PostgreSQL · Prisma · NextAuth · HeroUI
 
 ---
 

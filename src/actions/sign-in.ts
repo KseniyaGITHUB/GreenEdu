@@ -22,7 +22,7 @@ export async function signInWithCredentials(
     return {
       success: false,
       error:
-        "База данных не запущена. Запустите Docker Desktop и выполните: npm run setup"
+        "База данных недоступна. Запустите PostgreSQL (docker compose up -d) и npm run db:push"
     };
   }
 

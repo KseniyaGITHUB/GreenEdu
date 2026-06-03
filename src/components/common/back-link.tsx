@@ -6,7 +6,7 @@ interface BackLinkProps {
 }
 
 export default function BackLink({
-  href = "/ingredients",
+  href = "/courses",
   label = "← Назад к курсам"
 }: BackLinkProps) {
   return (

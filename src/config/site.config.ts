@@ -3,16 +3,10 @@ export const siteConfig = {
   description: "Все права защищены | by VSTU",
   navItems: [
     { href: "/", label: "Главная" },
-    { href: "/ingredients", label: "Курсы" },
+    { href: "/courses", label: "Курсы" },
     { href: "/about", label: "О нас" }
   ],
   pagesContent: {
-    "/": {
-      content: "Здесь будут рецепты..."
-    },
-    "/ingredients": {
-      content: "Традиционные ингредиенты татарской кухни..."
-    },
     "/about": {
       content: `
         <p>
@@ -89,6 +83,5 @@ export const siteConfig = {
         </p>
       `
     }
-    
   }
 };

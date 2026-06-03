@@ -20,37 +20,24 @@
 
 Курсы открыты **без входа**. Вход нужен для регистрации личного аккаунта.
 
-## Запуск локально
+## Запуск локально (Windows)
 
-### Windows (PowerShell)
+**Подробно:** [ZAPUSK.md](./ZAPUSK.md)
 
-1. Установите [Node.js LTS](https://nodejs.org/) и [Docker Desktop](https://www.docker.com/products/docker-desktop/) — Docker должен быть **запущен**.
-2. Скачайте **актуальный** репозиторий: https://github.com/KseniyaGITHUB/GreenEdu (не старый архив с `setup.mjs` / `ЗАПУСК.bat`).
-3. В папке проекта:
+1. [Node.js LTS](https://nodejs.org/) + [Docker Desktop](https://www.docker.com/products/docker-desktop/) — Docker **запущен**
+2. `git clone https://github.com/KseniyaGITHUB/GreenEdu.git` → `cd GreenEdu`
+3. Дважды щёлкните **[ЗАПУСК.bat](./ЗАПУСК.bat)**
 
-```powershell
-.\start-windows.ps1
-```
+Или в PowerShell: `.\start-windows.ps1`
 
-Если PowerShell блокирует скрипт один раз:
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\start-windows.ps1
-```
+Сайт: http://localhost:3000 · Курсы: http://localhost:3000/courses
 
 ### Linux / macOS
 
 ```bash
-cp .env.example .env
-docker compose up -d
-npm install
-npm run db:push
-npm run db:seed
-npm run dev
+cp .env.example .env && docker compose up -d
+npm install && npm run db:push && npm run db:seed && npm run dev
 ```
-
-Сайт: http://localhost:3000
 
 Для деплоя как на canwant.ru задайте `NEXT_PUBLIC_BASE_PATH=/eco` в `.env` перед `npm run build`.
 

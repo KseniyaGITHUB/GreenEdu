@@ -1,48 +1,30 @@
-# GreenEdu — Зелёное образование
+# Зеленое образование
 
-Онлайн-платформа экологического образования: курсы по устойчивому развитию, лекции в PDF, видео и тесты. Next.js 15, PostgreSQL, NextAuth.
+Онлайн-платформа про экологию и устойчивое развитие: курсы, лекции, тесты и видеоматериалы.
 
-**Демо:** https://canwant.ru/eco/
+**Сайт:** https://canwant.ru/eco/
 
-## Быстрый запуск (Windows)
+**Архив проекта:** [GreenEdu-latest.zip](./GreenEdu-latest.zip)
 
-1. [Node.js LTS](https://nodejs.org/) — установить один раз  
-2. [Docker Desktop](https://www.docker.com/products/docker-desktop/) — установить и запустить  
-3. Скачать **[GreenEdu-latest.zip](./GreenEdu-latest.zip)** → распаковать → **дважды щёлкнуть `ЗАПУСК.bat`**
+## Демо-аккаунт
 
-Сайт: **http://localhost:3000**
-
-| Email | Пароль |
-|-------|--------|
-| `demo@demo.ru` | `demo1234` |
-
-## Инструкции
-
-| Файл | Для кого |
-|------|----------|
-| **[ЗАПУСК-ДЛЯ-ДЕТЕЙ.md](./ЗАПУСК-ДЛЯ-ДЕТЕЙ.md)** | пошагово «куда нажимать» — для школьников |
-| **[ZAPUSK.md](./ZAPUSK.md)** | подробная инструкция для всех |
-| **[GreenEdu-latest.zip](./GreenEdu-latest.zip)** | готовый архив для передачи |
-
-## Команды
-
-```bash
-npm run go      # настройка + запуск (рекомендуется)
-npm run setup   # только настройка БД
-npm run dev     # только сайт (если setup уже был)
-npm run build   # production-сборка
-```
+| | |
+|---|---|
+| Email | `demo@demo.ru` |
+| Пароль | `demo1234` |
 
 ## Стек
 
-- Next.js 15, React 19, TypeScript  
-- PostgreSQL 16 (Docker), Prisma  
-- NextAuth v5, HeroUI  
+- Next.js 15, React 19, TypeScript
+- PostgreSQL, Prisma
+- NextAuth, HeroUI
 
-## Репозиторий
+## Структура
 
-https://github.com/ADAMANTOBLAST/GreenEdu
+- `src/` — приложение
+- `public/` — изображения и PDF лекций
+- `prisma/` — схема БД и seed
 
 ---
 
-© VSTU — все права защищены
+© VSTU
